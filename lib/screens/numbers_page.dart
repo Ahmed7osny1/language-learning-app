@@ -88,7 +88,7 @@ class NumbersPage extends StatelessWidget {
         itemCount: numbers.length,
         itemBuilder: (context, num){
           return ItemNumber(
-            number: numbers[num],
+            item: numbers[num],
             color: Colors.orange,
           );
           },

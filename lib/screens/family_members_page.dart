@@ -5,7 +5,7 @@ import '../model/itemmodel.dart';
 class FamilyMembersPage extends StatelessWidget {
   const FamilyMembersPage({super.key});
 
-  final List<ItemModel> numbers = const [
+  final List<ItemModel> familyList = const [
     ItemModel(
         image: 'assets/images/family_members/family_father.png',
         jpName: 'Chichioya',
@@ -46,7 +46,7 @@ class FamilyMembersPage extends StatelessWidget {
         image: 'assets/images/family_members/family_older_sister.png',
           jpName: 'Ane',
         enName: 'Older Sister',
-        sound: 'assets/sounds/family_members/older sister.wav'
+        sound: 'sounds/family_members/older sister.wav'
     ),
     ItemModel(
         image: 'assets/images/family_members/family_son.png',
@@ -85,10 +85,10 @@ class FamilyMembersPage extends StatelessWidget {
         backgroundColor: const Color(0xff46322B),
       ),
       body: ListView.builder(
-        itemCount: numbers.length,
+        itemCount: familyList.length,
         itemBuilder: (context, num){
           return ItemNumber(
-            number: numbers[num],
+            item: familyList[num],
             color: Colors.green
           );
         },
