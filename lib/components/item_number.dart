@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:languagelearningapp/model/number.dart';
+import 'package:languagelearningapp/model/itemmodel.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class ItemNumber extends StatelessWidget {
-  const ItemNumber({super.key, required this.number});
+  const ItemNumber({super.key, required this.number, required this.color});
 
-  final Number number;
+  final ItemModel number;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
       height: 100,
-      color: Colors.orange,
+      color: color,
       child: Row(
         children: [
           Container(
